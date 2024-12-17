@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby | Afiq Syahmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f5f5, #e8f0fe);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #0f3c30;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        .navbar .logo h3 {
+            color: #f3d250;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #f3d250;
+        }
+
+        .navbar .cta {
+            background-color: #f3d250;
+            color: #0f3c30;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .navbar .cta:hover {
+            background-color: #d6b740;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 120px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .main-content h1 {
+            font-size: 2.8rem;
+            color: #1e2a38;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .main-content p {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+
+        /* Hobby Section */
+        .hobbies {
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .hobby-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .hobby-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hobby-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hobby-item h3 {
+            font-size: 1.6rem;
+            color: #1e2a38;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .hobby-item p {
+            font-size: 1rem;
+            color: #666;
+            padding: 0 15px 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1e2a38;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content h1 {
+                font-size: 2.4rem;
+            }
+
+            .main-content p {
+                font-size: 1.1rem;
+            }
+
+            .hobby-item img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <h3>AfiqSyahmi</h3>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="family.html">Family</a>
+            <a href="friends.html">Friends</a>
+            <a href="education.html">Education</a>
+            <a href="hobby.html" class="active">Hobby</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <a href="https://linktree.com/afqsyahmi" target="_blank" class="cta">Contact Me</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>My Hobby</h1>
+        <p>Badminton is more than just a hobby for me, it's a thrilling blend of agility, strategy, and fun that keeps me energized, sharpens my skills, and brings unforgettable moments with friends on the court.</p>
+
+        <!-- Hobby Section -->
+        <div class="hobbies">
+            <div class="hobby-item">
+                <img src="image/hobby1.jpg" alt="Champ">
+                <h3>Secured the 1st Place</h3>
+                <p>All the hardwork paid off.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby2.jpg" alt="Badminton">
+                <h3>Sukan Antara Fakulti</h3>
+                <p>I love playing badminton with Fared to stay active and have fun.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby3.jpg" alt="SAF">
+                <h3>Final SAF 24</h3>
+                <p>Snippet from the final game during SAF '24</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby4.jpg" alt="2nd Place">
+                <h3>2nd Placing</h3>
+                <p>Lost to FPP at final SAF makes us only get the 2nd Place.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby5.jpg" alt="Buddy">
+                <h3>The One and Only</h3>
+                <p>With my pair during our latest badminton competition.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby6.jpg" alt="Buddy Pt. 2">
+                <h3>Buddy Pt. 2</h3>
+                <p>More snippet from the recent tournament.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby7.jpg" alt="String">
+                <h3>Cons</h3>
+                <p>Where all the expenses went to (buying new string).</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby8.jpg" alt="Smash">
+                <h3>Smashing Form</h3>
+                <p>Currently my favourite smashing form.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby9.jpg" alt="Intern">
+                <h3>Intern Tourney</h3>
+                <p>Warmup session before the tournament start.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby10.jpg" alt="Intern">
+                <h3>Intern Tourney Pt.2</h3>
+                <p>Shot taken during the game.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby11.jpg" alt="Intern">
+                <h3>Intern Tourney Pt.3</h3>
+                <p>Shot taken while I attacked the opponent.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby14.jpeg" alt="LD">
+                <h3>The King</h3>
+                <p>The only person who won the Olympics two times in a row.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby12.jpg" alt="AC">
+                <h3>Current Fav</h3>
+                <p>I'd love to watch badminton match during my free time.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby13.jpeg" alt="SYQ">
+                <h3>Current Fav Single Player</h3>
+                <p>The gameplay really mesmerized me.</p>
+            </div>
+            <div class="hobby-item">
+                <img src="image/hobby15.jpeg" alt="Legend">
+                <h3>Lee Chong Wei</h3>
+                <p>The most successful Malaysia badminton player.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 Afiq Syahmi. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
