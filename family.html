@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family | Afiq Syahmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #b6e7d4, #a8e0b2);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #0f3c30;
+            color: white;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .navbar .logo h3 {
+            color: #f3d250;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #f3d250;
+        }
+
+        .navbar .cta {
+            background-color: #f3d250;
+            color: #0f3c30;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .navbar .cta:hover {
+            background-color: #d6b740;
+        }
+
+        /* Main Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .content h2 {
+            text-align: center; /* Center the "My Family" heading */
+            font-size: 2.5rem;
+            color: #0f3c30;
+            margin-bottom: 30px;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 20px;
+            margin-top: 30px;
+            grid-template-areas: 
+                "mom dad eldest-sister"
+                "brother elder-sister youngest-sister"
+                "younger-sister . .";
+        }
+
+        .family-member {
+            background: #fff; 
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+            text-align: center;
+        }
+
+        .family-member img {
+            width: 100%; /* Full width */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Cover the area */
+        }
+
+        .family-member h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .family-member p {
+            padding: 0 10px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .family-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .family-member:nth-child(7) {
+            grid-column: 2; /* Place the youngest sister in the center */
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f3c30;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .family-grid {
+                grid-template-columns: 1fr; /* Stack items for smaller screens */
+            }
+
+            .family-member img {
+                height: 150px; /* Adjust the image height for small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .family-member img {
+                height: 120px; /* Further reduce height on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar fade-in">
+        <div class="logo">
+            <h3>AfiqSyahmi</h3>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="family.html" class="active">Family</a>
+            <a href="friends.html">Friends</a>
+            <a href="education.html">Education</a>
+            <a href="hobby.html">Hobby</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <a href="https://linktree.com/afqsyahmi" target="_blank" class="cta">Contact Me</a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content fade-in">
+        <h2>My Family</h2>
+
+        <!-- Family Grid Section -->
+        <div class="family-grid">
+            <div class="family-member">
+                <img src="image/mak.jpg" alt="Mom">
+                <h3>Mom</h3>
+                <p>My mom is my biggest supporter and my role model.</p>
+            </div>
+
+            <div class="family-member">
+                <img src="image/ayah.jpg" alt="Dad">
+                <h3>Dad</h3>
+                <p>My dad is my guide and my inspiration.</p>
+            </div>
+
+            <div class="family-member">
+                <img src="image/kaklong2.jpg" alt="Eldest Sister">
+                <h3>Eldest Sister</h3>
+                <p>My eldest sister is my best friend and partner in crime.</p>
+            </div>
+
+            <div class="family-member">
+                <img src="image/abangah.jpg" alt="Brother">
+                <h3>Brother</h3>
+                <p>My brother always knows how to make me laugh.</p>
+            </div>
+
+            <div class="family-member">
+                <img src="image/iqah.jpg" alt="Elder Sister">
+                <h3>Elder Sister</h3>
+                <p>My elder sister is a source of wisdom and love.</p>
+            </div>
+
+            <div class="family-member">
+                <img src="image/ain.jpg" alt="Younger Sister">
+                <h3>Younger Sister</h3>
+                <p>My younger sister is always there to help me whenever I needed it.</p>
+            </div>
+
+            <div class="family-member">
+                <img src="image/pina.jpg" alt="Youngest Sister">
+                <h3>Youngest Sister</h3>
+                <p>My youngest sister always brings joy and laughter into our family.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Afiq Syahmi. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
