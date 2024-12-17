@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends | Afiq Syahmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #d4e8ff, #b3c8e6);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #0f3c30;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo h3 {
+            color: #f3d250;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #f3d250;
+        }
+
+        .navbar .cta {
+            background-color: #f3d250;
+            color: #0f3c30;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .navbar .cta:hover {
+            background-color: #d6b740;
+        }
+
+        /* Header Section */
+        .header {
+            width: 100%;
+            height: 300px;
+            background-image: url('image/header1.jpg'); /* Replace with your header image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin-top: 70px; /* To offset the fixed navbar */
+        }
+
+        .header h1 {
+            font-size: 3rem;
+        }
+
+        /* Main Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .content h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #0f3c30;
+            margin-bottom: 30px;
+        }
+
+        /* Category Headings */
+        .category-heading {
+            text-align: center;
+            font-size: 2rem;
+            color: #0f3c30;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .friends-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Adjusted for 4 columns */
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .friend-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .friend-card img {
+            width: 100%; 
+            aspect-ratio: 1/1; /* Square shape */
+            object-fit: cover;
+        }
+
+        .friend-card h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .friend-card p {
+            padding: 0 10px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .friend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f3c30;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .friends-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .friends-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar fade-in">
+        <div class="logo">
+            <h3>AfiqSyahmi</h3>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="family.html">Family</a>
+            <a href="friends.html" class="active">Friends</a>
+            <a href="education.html">Education</a>
+            <a href="hobby.html">Hobby</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <a href="https://linktree.com/afqsyahmi" target="_blank" class="cta">Contact Me</a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>My Ride or Die</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content fade-in">
+        <h2>True friendship is when two friends can walk in opposite directions, yet remain side by side</h2>
+
+        <!-- High School Friends Section -->
+        <div class="category-heading">Memories with High School Friends (do click on the photos!)</div>
+        <div class="friends-grid">
+            <!-- Add High School friend cards here -->
+            <div class="friend-card">
+                <img src="image/friend3.jpg" alt="High School Friend 1">
+                <h3>My Usos</h3>
+                <p>Friends that who always made my school days better.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friend8.jpg" alt="High School Friend 2">
+                <h3>Study Buddy</h3>
+                <p>Took a selfie right after Addmaths SPM paper 1 with Haziq.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friend6.jpg" alt="High School Friend 3">
+                <h3>Gladiator RC</h3>
+                <p>Striving for a try with my teammates.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friend9.jpg" alt="High School Friend 4">
+                <h3>The Boys</h3>
+                <p>One last picture that every boys member of Innula Convalis complete.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friend13.jpg" alt="High School Friend 5">
+                <h3>Just Afiq with Afiq took pictures together</h3>
+                <p>Same name, same date of birth. We are truly brother with different mother!</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friend12.jpg" alt="High School Friend 6">
+                <h3>Yong Jaluddd</h3>
+                <p>One that always be my partner in crime.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friend5.jpg" alt="High School Friend 7">
+                <h3>Annual Dinner</h3>
+                <p>One last night with the boys.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friend16.jpg" alt="High School Friend 8">
+                <h3>Last match for Gladiator RC</h3>
+                <p>Your 6 o'clock is on my watch.</p>
+            </div>
+
+
+
+        </div>
+
+        <!-- University Friends Section -->
+        <div class="category-heading">Memories with University Friends</div>
+        <div class="friends-grid">
+            <!-- Add University friend cards here -->
+            <div class="friend-card">
+                <img src="image/friends1.jpg" alt="University Friend 1">
+                <h3>Aidilfitri Potluck !</h3>
+                <p>We're having Jamuan Hari Raya together to celebrate Eid.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friends2.jpg" alt="University Friend 1">
+                <h3>5C Boys</h3>
+                <p>Dinner with them on our last night for Semester 2.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friends3.jpg" alt="University Friend 1">
+                <h3>Hiking at Air Terjun Seri Perigi Yan</h3>
+                <p>Glad that I had the opportunity to witness the beauty of Yan.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friends4.jpg" alt="University Friend 1">
+                <h3>Sweating Session !</h3>
+                <p>Just done our weekly badminton session.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friends5.jpg" alt="University Friend 1">
+                <h3>Last paper for Semester 3</h3>
+                <p>"Always smile eventhough the paper is killing you inside".</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friends9.jpg" alt="University Friend 2">
+                <h3>Me and The Protos</h3>
+                <p>Just we got excited before our SULAM event started.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friends6.jpg" alt="University Friend 3">
+                <h3>Impromptu like always.</h3>
+                <p>Last minute plan to go to Zulfahmi's Openhouse :D</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="image/friends8.jpg" alt="University Friend 4">
+                <h3>Celebrating our friend's brother</h3>
+                <p>Got invitation to Dayan brother's Wedding.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<audio id="background-audio" autoplay loop muted>
+    <source src="audio/friendsound.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+<script>
+    // Unmute audio after user interaction (click)
+    document.body.addEventListener('click', function() {
+        const audio = document.getElementById('background-audio');
+        audio.muted = false;
+        audio.play();
+    });
+</script>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Afiq Syahmi. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
