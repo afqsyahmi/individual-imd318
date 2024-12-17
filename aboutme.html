@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Afiq Syahmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #b6e7d4, #a8e0b2);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #0f3c30;
+            color: white;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .navbar .logo h3 {
+            color: #f3d250;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #f3d250;
+        }
+
+        .navbar .cta {
+            background-color: #f3d250;
+            color: #0f3c30;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .navbar .cta:hover {
+            background-color: #d6b740;
+        }
+
+        /* Main Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .about-me {
+            flex: 1;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .about-me h2 {
+            font-size: 2.5rem;
+            color: #0f3c30;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Table for Details */
+        .about-me table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-me th, .about-me td {
+            padding: 12px 20px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .about-me th {
+            background-color: #f3d250;
+            color: #0f3c30;
+            font-weight: 600;
+        }
+
+        .about-me td {
+            background-color: #f9f9f9;
+        }
+
+        .about-me td:first-child {
+            width: 150px; /* Ensures the first column with labels is consistent in width */
+        }
+
+        /* Video Section */
+        .video-slot {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f3f3f3;
+            border-radius: 10px;
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            height: 480px; /* Set the height to match the content */
+        }
+
+        .video-slot video {
+            width: auto;
+            max-width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border: 5px solid #f3d250;
+            border-radius: 10px;
+        }
+
+        /* Photo Gallery Section */
+        .photo-gallery {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .photo-gallery h3 {
+            font-size: 1.8rem;
+            color: #0f3c30;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 5px solid #f3d250;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f3c30;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .video-slot {
+                padding: 10px;
+                margin: 20px;
+                height: 350px;
+            }
+
+            .video-slot video {
+                max-width: 90%;
+                max-height: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar fade-in">
+        <div class="logo">
+            <h3>AfiqSyahmi</h3>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html" class="active">About Me</a>
+            <a href="family.html">Family</a>
+            <a href="friends.html">Friends</a>
+            <a href="education.html">Education</a>
+            <a href="hobby.html">Hobby</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <a href="https://linktree.com/afqsyahmi" target="_blank" class="cta">Contact Me</a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content fade-in">
+        <div class="content-wrapper">
+            <div class="about-me">
+                <h2>About Me</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td>Muhammad Afiq Syahmi</td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td>20 years</td>
+                    </tr>
+                    <tr>
+                        <th>DOB</th>
+                        <td>2nd January 2004</td>
+                    </tr>
+                    <tr>
+                        <th>Occupation</th>
+                        <td>Full-time student</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>Lenggong, Perak</td>
+                    </tr>
+                    <tr>
+                        <th>Nationality</th>
+                        <td>Malaysia</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-slot fade-in">
+                <video controls autoplay>
+                    <source src="video/introvid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Gallery Section -->
+    <div class="photo-gallery fade-in">
+        <h3>My Favorite Moments</h3>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="image/afiq1.jpg" alt="Photo 1">
+                <div class="gallery-caption">My latest visit to Ipoh where I became model for our assignment project</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/afiq3.jpg" alt="Photo 3">
+                <div class="gallery-caption">Won the 2nd runner up in mens double category with my colleague while Im doing my internship</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/afiq4.jpg" alt="Photo 4">
+                <div class="gallery-caption">Amazing shot taken during the tournament</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/afiq5.jpg" alt="Photo 5">
+                <div class="gallery-caption">Just me and my passion.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/afiq10.jpg" alt="Photo 6">
+                <div class="gallery-caption">Just had a checkup about my eyes with optometrist</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/afiq11.jpg" alt="Photo 7">
+                <div class="gallery-caption">Finding some clothes at my favourite store, Uniqlo.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Afiq Syahmi. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
